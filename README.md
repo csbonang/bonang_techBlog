@@ -13,3 +13,7 @@ pass between model and view
 
 Handlebar: 
 template engine allows us to combine data with a static template to generate dynamic HTML 
+
+
+Reference 
+https://www.w3schools.com/css/css_navbar_horizontal.asp

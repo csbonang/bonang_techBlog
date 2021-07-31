@@ -6,7 +6,7 @@ const { BlogPosts } = require('../../models');
 // blog posts 
 // req.session.user_id,
 
-
+// dashboard 
 
 
 router.post('/', async (req, res) => {
