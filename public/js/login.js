@@ -10,7 +10,7 @@ const loginFormHandler = async (event) => {
         body: JSON.stringify({ username, password }),
         headers: { 'Content-Type': 'application/json' },
       });
-  
+      console.log(response); 
       if (response.ok) {
         // TODO: if login is successful, redirect to the user's dashboard page 
         document.location.replace('/dashboard');

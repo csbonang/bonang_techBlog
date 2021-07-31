@@ -14,17 +14,19 @@ module.exports = router;
 // TODO: route that redirects user to their dashboard 
 // added 
 // Use withAuth middleware to prevent access to route
-router.get('/dashboard', withAuth, async (req, res) => {
+// router.get('/dashboard', withAuth, async (req, res) => {
+router.get('/dashboard', async (req, res) => {
     try {
       // Find the logged in user based on the session ID
       const userData = await User.findByPk(req.session.user_id, {
         attributes: { exclude: ['password'] },
-        include: [{ model: Project }],
+        include: [{ model: BlogPosts}],
       });
   
       const user = userData.get({ plain: true });
-  
-      res.render('blogposts', {
+      console.log(user); 
+      // dashboard.handlebars
+      res.render('dashboard', {
         ...user,
         logged_in: true
       });
