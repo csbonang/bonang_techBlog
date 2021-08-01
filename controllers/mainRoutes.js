@@ -10,6 +10,14 @@ router.get('/',  (req, res) => {
 })
 module.exports = router;
 
+//signup
+// TODO: checking 
+// router.get('/signup',  (req, res) => {
+router.get('/signup',  (req, res) => {
+    res.render('signup')
+})
+module.exports = router;
+
 
 // TODO: route that redirects user to their dashboard 
 // added 

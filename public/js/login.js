@@ -1,3 +1,4 @@
+// used to login
 const loginFormHandler = async (event) => {
     event.preventDefault();
     // changes made 
@@ -19,8 +20,10 @@ const loginFormHandler = async (event) => {
       }
     }
   };
+
   
+  // login 
   document
     .querySelector('.login-form')
     .addEventListener('submit', loginFormHandler);
-  
+ 
