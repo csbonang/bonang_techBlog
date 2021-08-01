@@ -13,8 +13,9 @@ router.post('/', async (req, res) => {
   console.log("POST blog")
   try {
     const newBlogPosts = await BlogPosts.create({
-      ...req.body
-      // user_id: req.session.user_id,
+      ...req.body,
+      // TODO: testing to see if it generates
+      user_id: req.session.user_id,
     });
     console.log(req.body); 
 
