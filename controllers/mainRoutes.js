@@ -10,6 +10,18 @@ router.get('/',  (req, res) => {
 })
 module.exports = router;
 
+//logout 
+router.get('/logout', (req, res) => {
+  if (req.session.logged_in) {
+    req.session.destroy(() => {
+      res.status(204).end();
+    });
+  } else {
+    res.status(404).end();
+  }
+  // TODO logout res.redirect to home page 
+  res.redirect('/'); 
+});
 //signup
 // TODO: checking 
 // router.get('/signup',  (req, res) => {
